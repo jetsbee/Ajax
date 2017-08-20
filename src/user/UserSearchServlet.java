@@ -27,10 +27,10 @@ public class UserSearchServlet extends HttpServlet {
 		UserDAO userDAO = new UserDAO();
 		ArrayList<User> userList = userDAO.search(userName);
 		for(int i = 0; i < userList.size(); i++) {
-			result.append("[{\"value\": \"" + userList.get(i).getUserName() + "\'},");
-			result.append("{\"value\": \"" + userList.get(i).getUserAge() + "\'},");
-			result.append("{\"value\": \"" + userList.get(i).getUserGender() + "\'},");
-			result.append("{\"value\": \"" + userList.get(i).getUserEmail() + "\'}],");
+			result.append("[{\"value\": \"" + userList.get(i).getUserName() + "\"},");
+			result.append("{\"value\": \"" + userList.get(i).getUserAge() + "\"},");
+			result.append("{\"value\": \"" + userList.get(i).getUserGender() + "\"},");
+			result.append("{\"value\": \"" + userList.get(i).getUserEmail() + "\"}],");
 		}
 		result.append("]}");
 		return result.toString();
