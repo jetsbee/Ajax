@@ -38,3 +38,10 @@ ref. https://www.youtube.com/playlist?list=PLRx0vPvlEmdD2mcWus8hakX103PwcSJe8
   - mysql jdbc 드라이버 jar file WEB-INF/lib에 복사
   - 프로젝트 우클릭 - 빌드패스 - add JARs
 - - -
+
+## 4강 - JSON을 활용해 서블릿 구현하기 (JSP Ajax JSON Tutorial #4)
+
+- servlet: 요청을 제어(동작 수행, 로직 처리)하는 클래스
+- new - servlet
+- 생성자, doGet() 제거 -> 간단히 post 요청만 처리
+- - -
