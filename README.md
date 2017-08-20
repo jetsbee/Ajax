@@ -27,3 +27,14 @@ ref. https://www.youtube.com/playlist?list=PLRx0vPvlEmdD2mcWus8hakX103PwcSJe8
 - 패키지 -> 클래스 생성(대문자 시작)
 - 멤버 변수 만들고 이클립스 이용시, 에디터 우클릭 소스 - 게터, 세터 생성
 - - -
+
+## 3강 - 데이터베이스 연동하기 (JSP Ajax JSON Tutorial #3)
+
+- DAO 작성
+  - 디비와 JSP 연동 시 디비에 접근하게 해주는 클래스
+- 이클립스 이용 시 외부 라이브러리 추가(Ctrl + Shift + o)
+- Class.forName() 드라이버를 검색하게 하는 역할(reflection)
+- jdbc for mysql 적용
+  - mysql jdbc 드라이버 jar file WEB-INF/lib에 복사
+  - 프로젝트 우클릭 - 빌드패스 - add JARs
+- - -
