@@ -45,3 +45,9 @@ ref. https://www.youtube.com/playlist?list=PLRx0vPvlEmdD2mcWus8hakX103PwcSJe8
 - new - servlet
 - 생성자, doGet() 제거 -> 간단히 post 요청만 처리
 - - -
+
+## 5강 - Ajax를 이용해 서블릿과 통신하기 (JSP Ajax JSON Tutorial #5)
+
+- 클라이언트 AJAX 처리
+- SQL like 와일드카드
+- - -
