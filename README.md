@@ -51,3 +51,11 @@ ref. https://www.youtube.com/playlist?list=PLRx0vPvlEmdD2mcWus8hakX103PwcSJe8
 - 클라이언트 AJAX 처리
 - SQL like 와일드카드
 - - -
+
+## 6강 - 회원 등록 양식과 함수 구현하기 (JSP Ajax JSON Tutorial #6)
+
+- 회원 등록 폼 화면
+  - registerFunction() 구현 필요
+- 회원 등록 DAO 메소드
+  - pstmt.executeUpdate() - SQL이 실행하여 업데이트된 행의 수를 리턴
+- - -
