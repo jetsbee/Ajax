@@ -9,17 +9,18 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
 <script src="js/bootstrap.js"></script>
 <script type="text/javascript">
-	var request = new XMLHttpRequest();
+	var searchRequest = new XMLHttpRequest();
+	var registerRequest = new XMLHttpRequest();
 	function searchFunction() {
-		request.open("Post", "./UserSearchServlet?userName=" + encodeURIComponent(document.getElementById('userName').value), true);
-		request.onreadystatechange = searchProcess;
-		request.send(null);
+		searchRequest.open("Post", "./UserSearchServlet?userName=" + encodeURIComponent(document.getElementById('userName').value), true);
+		searchRequest.onreadystatechange = searchProcess;
+		searchRequest.send(null);
 	}
 	function searchProcess() {
 		var table = document.getElementById('ajaxTable');
 		table.innerHTML = "";
-		if(request.readyState == 4 && request.status == 200) {
-			var object = eval('(' + request.responseText + ')');
+		if(searchRequest.readyState == 4 && searchRequest.status == 200) {
+			var object = eval('(' + searchRequest.responseText + ')');
 			var result = object.result;
 			for(var i = 0; i < result.length; i++) {
 				var row = table.insertRow(0);
@@ -27,6 +28,33 @@
 					var cell = row.insertCell(j);
 					cell.innerHTML = result[i][j].value;
 				}
+			}
+		}
+	}
+	function registerFunction() {
+		registerRequest.open("Post", "./UserRegisterServlet?userName=" + encodeURIComponent(document.getElementById('registerName').value)
+			+ "&userAge=" + encodeURIComponent(document.getElementById('registerAge').value)
+			+ "&userGender=" + encodeURIComponent($('input[name=registerGender]:checked').val())
+			+ "&userEmail=" + encodeURIComponent(document.getElementById('registerEmail').value)
+			, true);
+		registerRequest.onreadystatechange = registerProcess;
+		registerRequest.send(null);
+	}
+	function registerProcess() {
+		if(registerRequest.readyState == 4 && registerRequest.status == 200) {
+			var result = registerRequest.responseText;
+			if(result != 1) {
+				alert('등록에 실패했습니다.');
+			} else {
+				var userName = document.getElementById('userName');
+				var registerName = document.getElementById('registerName');
+				var registerAge = document.getElementById('registerAge');
+				var registerEmail = document.getElementById('registerEmail');
+				userName.value = "";
+				registerName.value = "";
+				registerAge.value = "";
+				registerEmail.value = "";
+				searchFunction();
 			}
 		}
 	}

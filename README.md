@@ -59,3 +59,9 @@ ref. https://www.youtube.com/playlist?list=PLRx0vPvlEmdD2mcWus8hakX103PwcSJe8
 - 회원 등록 DAO 메소드
   - pstmt.executeUpdate() - SQL이 실행하여 업데이트된 행의 수를 리턴
 - - -
+
+## 7강 - 회원 등록 기능 구현 및 프로젝트 완료 (JSP Ajax JSON Tutorial #7)
+
+- 클라이언트 Ajax 회원등록 요청 및 성공 시 화면 조작, 실패시 알림 팝업
+- 받은 요청 컨트롤러가 처리 후 처리상태 리턴
+- - -
