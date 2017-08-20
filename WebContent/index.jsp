@@ -30,10 +30,12 @@
 			</tr>
 		</thead>
 		<tbody>
-			<td>홍길동</td>
-			<td>21</td>
-			<td>남</td>
-			<td>gildong@gmail.com</td>
+			<tr>
+				<td>홍길동</td>
+				<td>21</td>
+				<td>남자</td>
+				<td>gildong@gmail.com</td>
+			</tr>
 		</tbody>
 	</table>
 </div>
